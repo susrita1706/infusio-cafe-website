@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infusio Café | Infuse Your Moments</title>
+<meta name="description" content="Infusio Café - Signature coffees, desserts, and cozy vibes in Visakhapatnam. Reserve your table now!">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+/* Global */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+html{scroll-behavior:smooth;}
+body{color:#fff;background:#0f0f1a;}
+
+/* Hero */
+.hero{
+  height:90vh;
+  background:url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') center/cover no-repeat;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  top:0;left:0;width:100%;height:100%;
+  background:rgba(15,15,26,0.7);
+}
+.hero h1{font-size:3rem; z-index:1;}
+.hero p{margin:10px 0; color:#ddd; z-index:1;}
+.hero button{
+  padding:12px 25px;
+  border:none;
+  background:#7f5af0;
+  color:white;
+  border-radius:25px;
+  cursor:pointer;
+  font-size:1rem;
+  z-index:1;
+}
+.hero button:hover{opacity:0.9;}
+
+/* Section */
+section{padding:50px 20px;}
+h2{
+  margin-bottom:30px;
+  border-left:4px solid #7f5af0;
+  padding-left:10px;
+  font-size:1.8rem;
+  color:#fff;
+}
+
+/* Menu Grid */
+.menu-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+.card{
+  background:#1a1a2e;
+  padding:15px;
+  border-radius:15px;
+  transition:0.3s;
+  position:relative;
+}
+.card:hover{transform:translateY(-5px) scale(1.02);}
+.card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+.card h3{margin:10px 0;}
+.price{margin-top:8px;font-weight:600;}
+.badge{
+  position:absolute;
+  top:10px;
+  right:10px;
+  background:#7f5af0;
+  padding:5px 10px;
+  border-radius:20px;
+  font-size:0.75rem;
+}
+
+/* About / Contact */
+.about, .contact{text-align:center;max-width:800px;margin:auto;}
+.about p, .contact p{color:#bbb;margin-bottom:10px; font-size:1rem;}
+
+/* Gallery */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+}
+.gallery img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:12px;
+  cursor:pointer;
+  transition:0.3s;
+}
+.gallery img:hover{transform:scale(1.05); filter:brightness(0.8);}
+
+/* Form */
+.form label{display:block; margin-top:10px; margin-bottom:5px; color:#ddd;}
+.form input{
+  width:100%;
+  padding:10px;
+  margin-bottom:10px;
+  border-radius:8px;
+  border:none;
+}
+.form button{
+  padding:12px 25px;
+  background:#7f5af0;
+  border:none;
+  border-radius:20px;
+  color:white;
+  cursor:pointer;
+  font-size:1rem;
+}
+.form button:hover{opacity:0.9;}
+
+/* Footer */
+footer{text-align:center;padding:20px;background:#141428;color:#aaa;}
+
+/* Responsive */
+@media(max-width:600px){
+  .hero h1{font-size:2rem;}
+  h2{font-size:1.5rem;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Hero Section -->
+<div class="hero">
+  <h1>Infusio Café</h1>
+  <p>Infuse Your Moments</p>
+  <button onclick="document.getElementById('menu').scrollIntoView()">Explore Menu</button>
+</div>
+
+<!-- Signature -->
+<section id="menu">
+<h2>Signature Infusions</h2>
+<div class="menu-grid">
+  <div class="card"><span class="badge">Best</span>
+    <img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg" alt="Lavender Honey Latte">
+    <h3>Lavender Honey Latte</h3><div class="price">₹220</div>
+  </div>
+  <div class="card">
+    <img src="https://images.pexels.com/photos/302902/pexels-photo-302902.jpeg" alt="Rose Vanilla Cappuccino">
+    <h3>Rose Vanilla Cappuccino</h3><div class="price">₹210</div>
+  </div>
+  <div class="card"><span class="badge">Hot</span>
+    <img src="https://images.pexels.com/photos/585750/pexels-photo-585750.jpeg" alt="Caramel Cinnamon Latte">
+    <h3>Caramel Cinnamon Latte</h3><div class="price">₹230</div>
+  </div>
+  <div class="card">
+    <img src="https://images.pexels.com/photos/374885/pexels-photo-374885.jpeg" alt="Hazelnut Cream Coffee">
+    <h3>Hazelnut Cream Coffee</h3><div class="price">₹240</div>
+  </div>
+  <div class="card">
+    <img src="https://images.pexels.com/photos/414645/pexels-photo-414645.jpeg" alt="Mocha Mint Fusion">
+    <h3>Mocha Mint Fusion</h3><div class="price">₹230</div>
+  </div>
+</div>
+</section>
+
+<!-- Classic Coffee -->
+<section>
+<h2>Classic Coffee</h2>
+<div class="menu-grid">
+  <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG" alt="Espresso"><h3>Espresso</h3><div class="price">₹120</div></div>
+  <div class="card"><img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571" alt="Cappuccino"><h3>Cappuccino</h3><div class="price">₹180</div></div>
+  <div class="card"><img src="https://images.unsplash.com/photo-1498804103079-a6351b050096" alt="Latte"><h3>Latte</h3><div class="price">₹190</div></div>
+  <div class="card"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Americano"><h3>Americano</h3><div class="price">₹150</div></div>
+  <div class="card"><img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="Mocha"><h3>Mocha</h3><div class="price">₹210</div></div>
+</div>
+</section>
+
+<!-- Cold Beverages -->
+<section>
+<h2>Cold Beverages</h2>
+<div class="menu-grid">
+  <div class="card"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735" alt="Cold Brew"><h3>Cold Brew</h3><div class="price">₹190</div></div>
+  <div class="card"><img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5" alt="Iced Caramel Latte"><h3>Iced Caramel Latte</h3><div class="price">₹230</div></div>
+  <div class="card"><img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03" alt="Iced Mocha"><h3>Iced Mocha</h3><div class="price">₹240</div></div>
+</div>
+</section>
+
+<!-- Desserts -->
+<section>
+<h2>Desserts & Bites</h2>
+<div class="menu-grid">
+  <div class="card"><img src="https://images.pexels.com/photos/4110003/pexels-photo-4110003.jpeg" alt="Chocolate Brownie"><h3>Chocolate Brownie</h3><div class="price">₹180</div></div>
+  <div class="card"><img src="https://images.pexels.com/photos/2135/food-france-morning-breakfast.jpg" alt="Butter Croissant"><h3>Butter Croissant</h3><div class="price">₹120</div></div>
+  <div class="card"><img src="https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg" alt="Cheesecake"><h3>Cheesecake</h3><div class="price">₹220</div></div>
+  <div class="card"><img src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg" alt="Blueberry Muffin"><h3>Blueberry Muffin</h3><div class="price">₹140</div></div>
+</div>
+</section>
+
+<!-- Gallery -->
+<section>
+<h2>Our Café Moments</h2>
+<div class="gallery">
+  <img src="https://images.pexels.com/photos/374885/pexels-photo-374885.jpeg" alt="Cafe Image 1" onclick="openImage(this.src)">
+  <img src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg" alt="Cafe Image 2" onclick="openImage(this.src)">
+  <img src="https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg" alt="Cafe Image 3" onclick="openImage(this.src)">
+  <img src="https://images.pexels.com/photos/6267/menu-restaurant-vintage-table.jpg" alt="Cafe Image 4" onclick="openImage(this.src)">
+</div>
+</section>
+
+<!-- Opening Hours -->
+<section>
+<h2>Opening Hours</h2>
+<p style="text-align:center">Mon - Fri: 9 AM - 10 PM</p>
+<p style="text-align:center">Sat - Sun: 10 AM - 11 PM</p>
+</section>
+
+<!-- Reservation Form -->
+<section>
+<h2>Reserve a Table</h2>
+<div class="contact form">
+  <label for="name">Your Name</label>
+  <input type="text" id="name" placeholder="Your Name">
+  <label for="email">Email</label>
+  <input type="email" id="email" placeholder="Email">
+  <label for="date">Select Date</label>
+  <input type="date" id="date">
+  <label for="time">Select Time</label>
+  <input type="time" id="time">
+  <button onclick="reserveTable()">Book Now</button>
+</div>
+</section>
+
+<!-- Contact -->
+<section class="contact">
+<h2>Contact Us</h2>
+<p>📍 Visakhapatnam (Vizag), India</p>
+<p>📞 +91 9876543210</p>
+<p>✉ infusiocafe@gmail.com</p>
+<iframe src="https://www.google.com/maps?q=Visakhapatnam&output=embed"
+width="100%" height="250" style="border:0;border-radius:10px"></iframe>
+</section>
+
+<footer>
+<p>© 2026 Infusio Café</p>
+</footer>
+
+<!-- Gallery Popup -->
+<div id="popup" onclick="closeImage()" style="display:none;position:fixed;width:100%;height:100%;background:black;justify-content:center;align-items:center;">
+  <img id="popup-img" style="max-width:90%">
+</div>
+
+<script>
+function openImage(src){
+  document.getElementById("popup").style.display="flex";
+  document.getElementById("popup-img").src=src;
+}
+function closeImage(){
+  document.getElementById("popup").style.display="none";
+}
+function reserveTable(){
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const date = document.getElementById('date').value;
+  const time = document.getElementById('time').value;
+  if(name && email && date && time){
+    alert(`Table Reserved!\nName: ${name}\nEmail: ${email}\nDate: ${date}\nTime: ${time}`);
+  } else {
+    alert('Please fill all fields!');
+  }
+}
+</script>
+
+</body>
+</html>
